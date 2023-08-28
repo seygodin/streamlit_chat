@@ -55,7 +55,11 @@ with empty21:
 with empty12:
     empty()
 with but1:
-    run_buttton = st.button("Run AI")
+    if check_gpt_api_response(your_api_key)[0]:
+        run_buttton = st.button("Run AI")
+    else:
+        run_buttton = st.button("Run AI", disabled=True, help="Please check your API key and try again.")
+        
 with empty22:
     empty()    
     
