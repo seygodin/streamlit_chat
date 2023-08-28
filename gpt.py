@@ -15,6 +15,7 @@ with empty11:
 with cont1:
     st.title("Serial GPT Question and Answering")
     your_api_key = st.text_input(label="YOUR OPENAI API KEY")
+    
     if your_api_key:
         query_develop_model = ChatOpenAI(openai_api_key=your_api_key)
 
@@ -22,7 +23,7 @@ with cont1:
         
         query_model = ChatOpenAI(openai_api_key=your_api_key)
         
-        query = st.text_input(label="User Query")
+    query = st.text_input(label="User Query")
         
 with empty21:
     empty()
